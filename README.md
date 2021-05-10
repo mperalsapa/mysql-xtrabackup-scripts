@@ -1,5 +1,6 @@
 # mysql-xtrabackup-scripts
 Recopilacio d'scripts amb BASH per fer copies de seguretat.<br>
+**AVIS: Aquests scripts no respecten els backups, per tant, s'ha de guardar una copia d'aquestos en altre lloc.**
 ## Copia Lógica
 Executar script logica amb ```./logica /directori/on/guardar/backup```
 
