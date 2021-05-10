@@ -6,7 +6,12 @@ Executar script logica amb ```./logica /directori/on/guardar/backup```
 
 ## Copia Completa i Incremental
 Executar scripts amb ```./incremental_b.sh /directori/on/guardar/backup```
-Afegir el script en el crontab, per que s'executi cada dia a les 22:00 excepte el dilluns, que s'executara a les 23:59
+Afegir el script en el crontab, per que s'executi cada dia a les 22:00 excepte el dilluns, que s'executara a les 23:50
+```
+mperal@mpserver:~/scripts$ sudo crontab -l | tail -2
+00 22 * * 2-7 /home/mperal/scripts/incremental_b.sh
+50 23 * * 1 /home/mperal/scripts/incremental_b.sh
+```
 
 ## Restaurar copia del dimecres
 Executar el script amb la seguent comanda ```./restauracio_dimecres.sh /directori/dels/backups 16 ```
