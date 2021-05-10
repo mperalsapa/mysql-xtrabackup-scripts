@@ -5,12 +5,12 @@ sudo xtrabackup --backup --target-dir=/backups/inc2 --incremental-basedir=/backu
 
 # preparar backups manual i aplicar-los
 sudo systemctl stop mysql
-sudo xtrabackup --prepare --apply-log-only --target-dir=/backups/2021/16/com_Mon
-sudo xtrabackup --prepare --apply-log-only --target-dir=/backups/2021/16/com_Mon --incremental-dir=/backups/2021/16/inc_Tue
-sudo xtrabackup --prepare --target-dir=/backups/2021/16/com_Mon --incremental-dir=/backups/2021/16/inc_Wed
+sudo xtrabackup --prepare --apply-log-only --target-dir=/backups/full
+sudo xtrabackup --prepare --apply-log-only --target-dir=/backups/full --incremental-dir=/backups/inc1
+sudo xtrabackup --prepare --target-dir=/backups/full --incremental-dir=/backups/inc2
 sudo rm -r /var/lib/mysql
 sudo mkdir /var/lib/mysql
-sudo xtrabackup --copy-back --target-dir=/backups/2021/16/com_Mon --datadir=/var/lib/mysql
+sudo xtrabackup --copy-back --target-dir=/backups/full --datadir=/var/lib/mysql
 sudo chown -R mysql:mysql /var/lib/mysql
 sudo systemctl start mysql
 
