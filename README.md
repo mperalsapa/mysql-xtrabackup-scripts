@@ -21,6 +21,8 @@ Aquest script agafa el dimecres de la setmana indicada en la comanda i el restau
 Per fer proves d'aquest script o d'altres funcions en un sistema linux, es pot fer servir un petit script com es [test_un_mes.sh](./test_un_mes.sh) que fa servir la funcio date i aplica una data al sistema. Aquest script aprofita aixo i el itera en un bucle per que augmenti 1 setmana, en aquest cas. D'aquesta manera podem provar que crea les carpetes necessaries i que despres podem restaurar-les amb el script del dimecres.
 
 # Funcionament xtrabackup
+Exemple de funcionament de la eina xtrabackup amb un esquema senzill d'un backup sencer, amb dos backups incrementals.
+
 ## Generar backups
 ### Full backup
 ```sudo xtrabackup --backup --target-dir=/backups/sencer```
