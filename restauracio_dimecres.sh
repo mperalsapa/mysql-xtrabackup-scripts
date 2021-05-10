@@ -9,8 +9,8 @@ db=bd_hotels
 
 # Variables
 ## Missatges
-mErrSet="No has introduit una setmana, exemple d'execucio: $0 15 /backups"
-mErrDir="No has introduit un directori de backups valid, exemple d'execucio: $0 15 /backups"
+mErrSet="No has introduit una setmana, exemple d'execucio: $0 /backups 15 "
+mErrDir="No has introduit un directori de backups valid, exemple d'execucio: $0 /backups 15"
 ## Dates actuals
 data=$(date '+%Y-%m-%d_%H-%M-%S')
 dia=$(date '+%d')
